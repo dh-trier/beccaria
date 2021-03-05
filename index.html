@@ -36,36 +36,271 @@
 <hr/>
 <img height="50" data-src="img/basics/uni-trier.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height="70" data-src="img/basics/tcdh-slim.png">
 
+::
+- Welcome to this talk. It's nice to be here! 
+- My name is CS
+- I'll be talking about (read title)
+- Collaborative work, with CM, FB, RMK and others
+- Little caveat: I'm not a legal scholar, please keep this in mind
+- I'll focus more on the DH side of the project
+
 
 
 --
 ## Overview
-1. [](#/2)
-1. [](#/3)
-1. [](#/4)
+<br/>
+
+1. [Cesare Beccaria, _Dei delitti e delle pene_ (1764)](#/2)
+1. [Metalex - Les mots du droit](#/3)
+1. [Modeling the multilingual _Delitti_](#/4)
 1. [Conclusion](#/5)
 
 
+::
+- Three things I'd like to talk about
+- A bit about the treatise "Dei delitti e delle pene", its editions and translations in the 18th century
+- Then a short interlude about our project
+- Then a bit more on what we're trying to do with this multilingual traditions of texts
+
+
 --
-## 1. "Le moment Beccaria"
+## (1) Cesare Beccaria,<br/> _Dei delitti e delle pene_ (1764)
+<br/>
+<img height="250" data-src="img/Cesare_Beccaria.jpg">
+
+::
+- Beccaria: 
+  - enlightenment philosopher; 
+  - key author for the foundation of modern criminal law; 
+- We're particularly interested in the editions and translations of his main work
+- What follows are just a few examples of these editions
+- The title pages (and prefaces) give a lot of interesting information
+
+
+
+---
+### _Dei delitti e delle pene_ (ita, 1764)
+<img height="500" data-src="img/delitti_ita-1764.jpg">
+<br/><p>Italian edition, first published in 1764 (Livorno)</p>
+
+::
+- As we can see, the work was published anonymously
+- One more edition in 1764
+- And a revised edition already in 1765
+- Alltogether, it looks like there were 9 italian Editions until 1800 alone. 
+
+
+---
+### _Des délits et des peines_ (fra, 1766)
+<img height="500" data-src="img/delitti_fra-1766.jpg">
+<br/><p>French translation by Morrelet, 1766.</p>
+
+::
+- Several remarkable things here 
+- First, the French translation is by Morrelet, important philosopher in his own right
+- The translation is based on the third, revised, Italian edition (1765)
+- It includes additions by Morrelet
+- Not visible here: Many of these additions were included in subsequent italian editions (1774, and more)! 
+
+
+---
+### _Des délits et des peines_ (deu, 1766)
+<img height="500" data-src="img/delitti_deu-1766c.jpg">
+<br/><p>German translation, 1766.</p>
+
+
+::
+- Again, some interesting things to note. 
+- The German edition is translated from the French
+- Again, with additional changes
+
+
+---
+### Editions and translations (overview)
+<a href="img/delitti-europe.svg"><img height="500" data-src="img/delitti-europe.jpg"></a>
+<br/><p>(Data: Floriane Chiffoleau, visualization: CS)</p>
+
+::
+- Here, the overview of all editions or translations in the four languages we focus on
+- We have been able to identify 29 editions or translations in total, up to 1800. 
+- Of note are those E/T that spark new lines of translations
+- This investigation could of course be extended
+  - into more languages: Swedish, Spanish, Polish, for example. 
+  - into the 19th century. 
+- But for the moment, we focus on the 18th century. 
+- So, what do we do with this tradition in our project?
+
+
+--
+## (2) Metalex - Les mots du droit
+
+
+---
+### Project profile
+* Franco-german research project (Trier and Paris)
+* Cooperation between
+  * EHESS Paris (Falk Bretschneider, Rainer Maria Kiesow)
+  * TCDH Trier (Claudine Mouline, Christof Schöch) 
+* Exploratory project supported by
+  * Fondation Maison des Sciences de l'homme
+  * Villa Vigoni - Centro italo-tedesco per il dialogo europeo
+* Focus on historical, multilingual, digital lexicography in the area of legal discourse
+* First pilot / use case for a broader study: _Dei delitti e delle pene_
+
+
+---
+### Work so far
+* Research and interdisciplinary exchange at the same time
+  * Several work meetings
+  * Workshop for ECI in Paris 
+* Investigation into the history of editions and translations (Chiffoleau, see above)
+* Digitisation: Identification, scanning, OCR of the editions and translations
+* Developed a data model and research scenarios for this material
+
+::
+- What have we done so far? 
+
+
+
+--
+## (3) Modeling the multilingual _Delitti_
+
+
+---
+### Key issues 
+* Development of European law-related vocabulary
+* How are key legal concepts expressed in the editions and translations?
+* How can we make the historical practice accessible?
+
+
+---
+### The idea of the "meta-lexemes"
+* {LAW}
+  * [LAW]
+    * Gesetz (Gesetz, Gesetze, Gesetzes...)
+    * loi (loi, lois, loix)
+    * law (law, laws)
+    * legge (...)
+  * [LEGISLATION]
+    * legislatore (legislatione, legislative, ...)
+    * Gesetzgeber (Gesetzgeber, Gesetzgebung, ...)
+    * législateur (législation, ...)
+    * legislator (...)
+  * [LEGALITY]
+    * legale (...)
+    * gesetzlich (gesetzlich, rechtmäßig)
+    * légal (légalité)
+    * legal (legally)  
+
+
+:: 
+- This is where the idea of the "meta-lexemes" comes in
+- We think of this as a bottom-up, inductive process
+- What legal terms do we find, how can they be usefully clustered? 
+- We go from the word forms (in brackets)
+- Merge them to a language-based lemma
+- Merge the lemmas to a cross-language lemma
+- Merge several related cross-language lemmas into a "meta-lexeme"
+
+---
+### Further examples of meta-lexemes
+* CRIME
+* INNOCENCE
+* PASSION
+* PUNISHMENT
+* PREVENTION
+* PROHIBITION
+* PROTECTION
+* SEDUCTION
+* SEXUALITY
+* VICE
+* ...
+
+::
+- These are just a few more examples
+- The process of building and consolidating this list is ongoing
+- But: there is no predefined ontology assumed, all bottom-up 
+
+
+---
+### Encoding
+1. Alignment of sentences across languages<br/>(challenges: insertions, reorganizations, free translation)
+1. Linguistic annotation with lemma and POS<br/>(challenges: orthographic variation)
+1. Identification and annotation of lexemes corresponding to "meta-lexemes" (semi-automatic)
+1. Everything is encoded in XML-TEI (e.g. for TXM)
+
+::
+- We follow these basic three steps
+- Everything is encoded in XML-TEI for ingest e.g. in TXM
+
+
+---
+### An example of an XML document
+<img height="550" data-src="img/txm-xml.png">
+
+::
+- This is a small sample from one such XML files, here French text
+- Note that each sentence (or more precisely: segment) has an id
+- This is to match up sentences across editions / translations
+- Then, for each word form, we have: the wordform, the POS, the lemma, 
+- And, if applicable, the "meta-lexeme" marked with "mlx"
+
+
+---
+### Sample corpus in TXM:<br/>4 languages, 8 documents
+<img height="450" data-src="img/txm-dimensions.png">
+
+
+---
+### TXM: Search for a lemma
+<img height="450" data-src="img/txm-lemma.png">
+
+
+---
+### TXM: Concordance for lemma
+<img height="450" data-src="img/txm-concordance.png">
+
+
+---
+### TXM: Concordance for meta-lexeme
+<img height="450" data-src="img/txm-metalexeme.png">
 
 
 --
 ## Conclusion
 
----
-### Where we stand
-    
 
 ---
 ### Next steps
+* Quantatively
+  * Automation, automation, automation (alignment, meta-lexemes)
+  * Based on this: increase the scale (more, complete, texts)
+* Qualitatively
+  * Better conceptual basis for the inventory of lexemes
+  * Integrate metalexemes and texts into the LOD paradigm
 
+::
+- I think it has become clear where we stand: 
+- In the middle of a small-scale pilot project
+- The next steps are therefore (slides)
+  
+
+---
+### 
+<br/><br/>
+
+### Thank you! | Grazie! | Danke! | Merci!
 
 ---
 ### References
 <small>
 
-* 
+* Audegean, Ph. & Delia, L. (2018) (eds.). Le Moment Beccaria: naissance du droit penal moderne (1764-1810). Liverpool:  Liverpool University Press.
+* Bretschneider F., Kiesau, R. M., Moulin, C., Schöch, Ch. (2020). „Les mots de Beccaria. Métalexico-graphie des langues du droit à partir de Dei delitti e delle pene (1764) et ses traductions en Europe”. In: Revue Beccaria.
+* Burnard, L. (2014). What Is the Text Encoding Initiative? : How to Add Intelligent Markup to Digital Resources. Marseille: OpenEdition Press. http://books.openedition.org/oep/426.
+* Chiffoleau, F. (2019). Vers un alignement de traductions et d’édtions à partir d’un lexique et à travers un corpus multilingue. Travail sur Dei Delitti e delle Pene du marquis de Beccaria. Mémoire de Master, École Nationale des Chartes, Paris.
+* Heiden, Serge (2010). “The TXM Platform: Building Open-Source Textual Analysis Software Compatible with the TEI Encoding Scheme.” In Proceedings of the 24th Pacific Asia Conference on Language, Information and Computation, 389–98. http://halshs.archives-ouvertes.fr/halshs-00549764.
+* Ketzan, Erik und Christof Schöch: "What Changed When Andy Weir's The Martian Got Edited?" _Digital Humanities Conference 2017_, Montréal: McGill University and Université de Montréal, 2017, https://dh2017.adho.org/abstracts/317/317.pdf.
 
 </small>
 
